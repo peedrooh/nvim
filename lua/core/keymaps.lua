@@ -16,5 +16,7 @@ vim.opt.expandtab = true
 
 vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
 
-vim.g.tokyonight_transparent = true
-vim.g.tokyonight_style = "transparent"
+-- Nvim-tree 
+vim.keymap.set('n', '<c-n>', ':NvimTreeFindFileToggle<CR>')
+vim.keymap.set('n', '<C-h>', '<C-w>h')
+vim.keymap.set('n', '<C-l>', '<C-w>l')
