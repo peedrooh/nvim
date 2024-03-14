@@ -21,15 +21,18 @@ return require('packer').startup(function(use)
   -- Neovim Tree - Navigation Menu
   use 'nvim-tree/nvim-tree.lua'
   use 'nvim-tree/nvim-web-devicons'
-  -- Lualine
-  use 'nvim-lualine/lualine.nvim'
   -- Treesitter - Text highligthing
   use 'nvim-treesitter/nvim-treesitter'
   -- Telescope
   use {
     'nvim-telescope/telescope.nvim',
-    tag = '0.1.0',
+    tag = '0.1.6',
     requires = { {'nvim-lua/plenary.nvim'} }
+  }
+  -- Lualine
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
