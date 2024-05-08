@@ -17,6 +17,8 @@ return {
 					"lua_ls",
 					"prismals",
 					"pyright",
+					"clangd",
+					"rust-analyzer",
 				},
 			})
 		end,
@@ -50,6 +52,23 @@ return {
 
 			lspconfig["pyright"].setup({
 				capabilities = capabilities,
+			})
+
+			lspconfig["clangd"].setup({
+				capabilities = capabilities,
+			})
+
+			lspconfig["rust-analyzer"].setup({
+				capabilities = capabilities,
+				filetypes = { "rust" },
+				root_dir = lspconfig.util.root_pattern("Cargo.toml", "rust-project.json"),
+				settings = {
+					["rust-analyzer"] = {
+						cargo = {
+							allFeatures = true,
+						},
+					},
+				},
 			})
 
 			lspconfig["lua_ls"].setup({
