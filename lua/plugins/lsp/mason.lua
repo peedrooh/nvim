@@ -83,7 +83,6 @@ return {
 				capabilities = capabilities,
 				cmd = {
 					"clangd",
-					"--background-index --query-driver=/home/pedro/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/xtensa-esp32-elf-*",
 				},
 				root_dir = lsp.util.root_pattern("build/compile_commands.json", ".git"),
 			})
